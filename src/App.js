@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import SearchBox from './components/SearchBox'
+import LocationContainer from "./components/LocationContainer";
 import './App.css';
 
 function App() {
   const [ id, setId ] = useState("1")
-  const [ searchValue, setSearchValue] = useState()
-  const URL_LOCATION = `https://rickandmortyapi.com/api/location/${id}`;
+  const [ searchValue, setSearchValue] = useState();
 
   //Handlers para el SearchBox, así le asignamos el id a la URL
   const settingSearchValue = (e) => {
@@ -19,6 +19,7 @@ function App() {
   return (
     <div className="App">
         <SearchBox handler={handlerId} handlerInput={settingSearchValue}/>
+        <LocationContainer ID={id}/>
     </div>
   );
 }
