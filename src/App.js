@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import SearchBox from './components/SearchBox'
 import './App.css';
 
 function App() {
+  const [ id, setId ] = useState("1")
+  const [ searchValue, setSearchValue] = useState()
+  const URL_LOCATION = `https://rickandmortyapi.com/api/location/${id}`;
+
+  //Handlers para el SearchBox, así le asignamos el id a la URL
+  const settingSearchValue = (e) => {
+    setSearchValue(e.target.value)
+  }
+  const handlerId = (e) => { 
+    e.preventDefault();
+    setId(searchValue)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <SearchBox handler={handlerId} handlerInput={settingSearchValue}/>
     </div>
   );
 }
