@@ -1,7 +1,13 @@
-import React from "react";
+import React, {useEffect} from "react";
 
-const ResidentInfo = () => {
+const ResidentInfo = ({item}) => {
+    const {name} = item
 
+    return(
+        <>
+            <p>{name}</p>            
+        </>
+    )
 }
 
 export default ResidentInfo;

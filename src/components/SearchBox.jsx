@@ -1,10 +1,10 @@
 import React from "react";
 
-const SearchBox = ({handler, handlerInput}) => (
+const SearchBox = ({ handlerInput}) => (
     <>    
-        <form>
-            <input placeholder="Search with Id number" onChange={handlerInput}></input>
-            <button onClick={handler}>Search</button>
+        <form onSubmit={handlerInput}>
+            <input placeholder="Search with Id number" ></input>
+            <button>Search</button>
         </form>
     </>
 )
