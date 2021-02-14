@@ -1,0 +1,65 @@
+.form {
+    margin-top: 4%;
+}
+
+.LocationInfo {
+    margin-top: 3%;
+}
+
+.LocationInfo > p{
+    color: rgb(23, 91, 146);
+}
+
+.LocationInfo > p >span{
+    color: rgb(172, 21, 21);
+}
+
+
+.containerResi {
+    margin-top: 3%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.resident{
+    width: 300px;
+    border-radius: 20px;
+    background-color:rgba(91,96,110,0.3);
+    margin-top: 10px;
+    margin-bottom: 60px;
+    transition: 500ms;
+}
+
+.resident:hover{
+    background-color:rgba(91,96,110,0.8);
+}
+
+.resident > img {
+    transition: all .2s ease-in-out;
+    border-radius: 20px;
+    opacity: 0.8;
+}
+
+.resident:hover > img {
+    opacity: 1;
+    border-radius: 20px;
+    transition: 1;
+    transform: scale(1.1);
+}
+
+.resident > p {
+    color:rgb(150, 150, 20);
+}
+.resident:hover > p {
+    transition: 1s;
+    color:rgb(247, 247, 31);
+}
+
+.resident > p >span {
+    color: rgb(32, 104, 32);
+}
+.resident:hover > p >span {
+    transition: 1s;
+    color: rgb(74, 235, 74);
+}

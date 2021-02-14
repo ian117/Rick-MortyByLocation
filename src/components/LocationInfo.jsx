@@ -1,11 +1,11 @@
 import React from "react";
-import ResidentContainer from "./ResidentContainer";
+import "../styles/Residents.css";
 
 const LocationInfo = ({ NAME, TYPE, DIMENSION, DATE ,RESIDENTS }) => {
 
     return (
         <>
-            <div>
+            <div className="LocationInfo">
                 <p>Name: <span>{NAME}</span></p>
                 <p>Type: <span>{TYPE}</span></p>
                 <p>Dimension: <span>{DIMENSION}</span></p>

@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import ResidentInfo from "./ResidentInfo";
+import  "../styles/Residents.css";
 
 const ResidentContainer = ({Residents}) => {
     const [ component, setcomponent ] = useState([])
@@ -35,7 +36,7 @@ const ResidentContainer = ({Residents}) => {
         },[Residents])
     
     return (
-        <div>
+        <div className="containerResi">
           {component}
         </div>
     )

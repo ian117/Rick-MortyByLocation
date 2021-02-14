@@ -4,8 +4,17 @@ import LocationContainer from "./components/LocationContainer";
 import './App.css';
 
 function App() {
-  const [ id, setId ] = useState()
+  const [ id, setId ] = useState();
   const [ searchValue, setSearchValue] = useState();
+
+  //Llamado random
+  useEffect(() => {
+    const stringThis = Math.floor(Math.random() * 108)
+    stringThis.toString()
+    setTimeout(() => {
+      setId(stringThis)
+    }, 500)
+  },[])
 
   //Handlers para el SearchBox, así le asignamos el id a la URL
   const settingSearchValue = (e) => {

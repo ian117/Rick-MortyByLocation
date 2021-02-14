@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #202223;
+  color: whitesmoke;
+}
+
 .App {
   text-align: center;
 }

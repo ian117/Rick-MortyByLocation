@@ -2,7 +2,7 @@ import React, { useState,useEffect} from "react";
 import LocationInfo from "./LocationInfo";
 import ResidentContainer from "./ResidentContainer";
 
-const LocationContainer = ({ID}) => {
+const LocationContainer = ({ID }) => {
     //state para ver si hay error
     const [ isError, setIsError] = useState(true);
     const URL_LOCATION = `https://rickandmortyapi.com/api/location/${ID}`;
@@ -15,7 +15,7 @@ const LocationContainer = ({ID}) => {
 
     //Cuantos residentes existen
     const tenResidents = (data) => {
-        const residentsArrayFake = [...data.residents]
+            const residentsArrayFake = [...data.residents]
         if (residentsArrayFake.length > 10) {
             const arraNew = residentsArrayFake.slice(0,10)
             setResidentsArr(arraNew) 
